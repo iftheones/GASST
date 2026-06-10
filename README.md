@@ -1,6 +1,9 @@
 # GASST
 The open source code will be available here after the publication of the paper GASST:Geometrically Adaptive Spatial-Spectral Selective Cross-Scale Transformer for Hyperspectral Image Classification.
 
+<img width="1776" height="720" alt="GASST" src="https://github.com/user-attachments/assets/c2bc0c75-25d2-4fb6-a274-50e3b6b451d1" />
+
+
 ## 🚀Let's Get Started!
 ### `A. Installation`
 **Step 1: Clone the repository:**
