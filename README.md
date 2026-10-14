@@ -19,7 +19,8 @@
 **GASST** is a hyperspectral image classification model organized around three modules: **GARFB**, **GLITB**, and **TSFAB**. It learns patch-level representations using multi-scale receptive fields and selective spatial–spectral feature processing, then predicts the class of the center pixel.
 
 <div align="center">
-  <img src="figures/GASST.png" alt="GASST conceptual architecture supplied with the project" width="100%">
+  <img width="1225" height="492" alt="GASST (3) (1)" src="https://github.com/user-attachments/assets/3ce0ac35-d315-4cd9-85f5-d52d0a3c5182" />
+
   <br>
   <sub>Conceptual architecture supplied with the project. See the implementation note below for the executable structure.</sub>
 </div>
