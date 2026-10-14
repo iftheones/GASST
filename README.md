@@ -138,7 +138,7 @@ Use `--data-dir /path/to/datasets` for an external dataset directory. Each outpu
 | `checkpoints/GASST/...` | Checkpoints saved by the original training function |
 | `Exp_*/` and `Log_*/` | Classification maps and experiment logs produced by the original entry point |
 
-The wrapper adds recording and initial seeding without editing the model, preprocessing, optimizer, or training loop. See the [中文 Demo 指南](docs/DEMO.md) for details and troubleshooting.
+The wrapper adds recording and initial seeding without editing the model, preprocessing, optimizer, or training loop. 
 
 ## 🧪 Training & Evaluation
 
