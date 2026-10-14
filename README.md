@@ -229,7 +229,6 @@ if you find it useful for your research, please consider giving this repo a ⭐ 
 This work was supported by the National Natural Science Foundation of China (42261068) and the Natural Science Foundation of Jiangxi Province (20242BAB25112).<br>
 
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yichuxu%2Fdsformer&type=Date)](https://www.star-history.com/?repos=YichuXu%2FDSFormer&type=date&legend=top-left)
 
 
 
