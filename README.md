@@ -1,8 +1,7 @@
 <div align="center">
 
-# GASST
+# GASST: Geometrically Adaptive Spatial-Spectral Selective Cross-Scale Transformer for Hyperspectral Image Classification
 
-### Spatial–Spectral Feature Modeling for Hyperspectral Image Classification
 
 **Adaptive Receptive Fields · Global–Local Interaction · Selective Token Fusion**
 
@@ -201,18 +200,10 @@ GASST/
 ├── utils/                      # Data, metrics, optimization, and visualization
 ├── figures/GASST.png           # Supplied conceptual architecture
 ├── datasets/                   # User-provided data
-├── docs/
-│   ├── DEMO.md                 # Chinese demo guide and reproducibility notes
-│   ├── RELEASE_NOTES.md        # Naming and packaging changes
-│   ├── rename_validation.json  # Numerical equivalence record
-│   └── UPSTREAM_README.md      # Upstream attribution and references
 ├── requirements.txt
 └── LICENSE
 ```
 
-## 📜 Reference
-
-GASST publication metadata has not yet been supplied for this release, so a GASST BibTeX entry is not fabricated here. The upstream DSFormer reference is preserved in [the original project documentation](docs/UPSTREAM_README.md); it is attribution for the source implementation, not a GASST paper citation.
 
 ## 🙋 Q & A
 
@@ -228,11 +219,7 @@ Compatible `state_dict` weights can be loaded with the same model configuration.
 **How should I report a problem?**  
 Include the command, Python/PyTorch versions, and the generated `console.log` and `manifest.json`. Remove local paths you do not wish to share.
 
-## 💖 Acknowledgments & License
 
-This release is organized from the existing DSFormer implementation. Original authorship, source acknowledgments, and references are retained in [UPSTREAM_README.md](docs/UPSTREAM_README.md).
-
-The code retains the original [MIT License](LICENSE) and copyright notice. Please preserve these notices when redistributing the source.
 
 ---
 
