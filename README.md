@@ -1,7 +1,8 @@
 <div align="center">
 
-# GASST: Geometrically Adaptive Spatial-Spectral Selective Cross-Scale Transformer for Hyperspectral Image Classification
+# GASST
 
+### Spatial–Spectral Feature Modeling for Hyperspectral Image Classification
 
 **Adaptive Receptive Fields · Global–Local Interaction · Selective Token Fusion**
 
@@ -10,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-6366F1?style=flat-square)](LICENSE)
 [![Demo](https://img.shields.io/badge/Demo-Get_Started-0F766E?style=flat-square)](#-quick-demo)
 
-[Overview](#-overview) • [Installation](#a-installation) • [Data](#b-data-preparation) • [Demo](#-quick-demo) • [Experiments](#-training--evaluation) 
+[Overview](#-overview) • [Installation](#a-installation) • [Data](#b-data-preparation) • [Demo](#-quick-demo) • [Experiments](#-training--evaluation) • [中文 Demo 指南](docs/DEMO.md)
 
 </div>
 
@@ -19,8 +20,7 @@
 **GASST** is a hyperspectral image classification model organized around three modules: **GARFB**, **GLITB**, and **TSFAB**. It learns patch-level representations using multi-scale receptive fields and selective spatial–spectral feature processing, then predicts the class of the center pixel.
 
 <div align="center">
-  <img width="1225" height="492" alt="GASST (3) (1)" src="https://github.com/user-attachments/assets/3ce0ac35-d315-4cd9-85f5-d52d0a3c5182" />
-
+  <img src="figures/GASST.png" alt="GASST conceptual architecture supplied with the project" width="100%">
   <br>
   <sub>Conceptual architecture supplied with the project. See the implementation note below for the executable structure.</sub>
 </div>
@@ -180,8 +180,11 @@ The demo defaults to one run; `main.py` alone defaults to three. The training lo
 
 ### Reproducibility status
 
-The demo makes experiments easier to run and audit; it does not promise to reproduce unspecified historical scores.
+The release has passed model-renaming checks: parameter keys and initial values match, strict weight loading succeeds, and fixed-input forward outputs and gradients are identical in an isolated CPU comparison. See the [validation record](docs/rename_validation.json).
 
+**A full GASST benchmark has not been rerun. Verified target OA/AA/Kappa values and an associated checkpoint/configuration bundle are not yet included.** The demo makes experiments easier to run and audit; it does not promise to reproduce unspecified historical scores.
+
+Important protocol details are documented in [docs/DEMO.md](docs/DEMO.md): the original training-set validation, final-model evaluation, separately fitted PCA transforms, and repeated-run behavior are preserved. Initial seeding improves traceability but does not guarantee identical results across environments or reproduce past runs whose Torch seed was not recorded.
 
 > **Metric units:** the original metric function reports OA, AA, per-class accuracy, and **Kappa × 100**. Divide the stored Kappa by 100 when reporting it on the usual coefficient scale.
 
@@ -198,10 +201,18 @@ GASST/
 ├── utils/                      # Data, metrics, optimization, and visualization
 ├── figures/GASST.png           # Supplied conceptual architecture
 ├── datasets/                   # User-provided data
+├── docs/
+│   ├── DEMO.md                 # Chinese demo guide and reproducibility notes
+│   ├── RELEASE_NOTES.md        # Naming and packaging changes
+│   ├── rename_validation.json  # Numerical equivalence record
+│   └── UPSTREAM_README.md      # Upstream attribution and references
 ├── requirements.txt
 └── LICENSE
 ```
 
+## 📜 Reference
+
+GASST publication metadata has not yet been supplied for this release, so a GASST BibTeX entry is not fabricated here. The upstream DSFormer reference is preserved in [the original project documentation](docs/UPSTREAM_README.md); it is attribution for the source implementation, not a GASST paper citation.
 
 ## 🙋 Q & A
 
@@ -217,7 +228,11 @@ Compatible `state_dict` weights can be loaded with the same model configuration.
 **How should I report a problem?**  
 Include the command, Python/PyTorch versions, and the generated `console.log` and `manifest.json`. Remove local paths you do not wish to share.
 
+## 💖 Acknowledgments & License
 
+This release is organized from the existing DSFormer implementation. Original authorship, source acknowledgments, and references are retained in [UPSTREAM_README.md](docs/UPSTREAM_README.md).
+
+The code retains the original [MIT License](LICENSE) and copyright notice. Please preserve these notices when redistributing the source.
 
 ---
 

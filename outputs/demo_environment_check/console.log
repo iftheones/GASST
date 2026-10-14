@@ -1,0 +1,23 @@
+Microsoft Visual C++ Redistributable is not installed, this may lead to the DLL load failure.
+It can be downloaded at http<LOCAL_PATH>
+Output: <LOCAL_PATH>
+Traceback (most recent call last):
+  File "<LOCAL_PATH>", line 192, in main
+    smoke(torch, output)
+  File "<LOCAL_PATH>", line 100, in smoke
+    from models.GASST import GASST
+  File "<LOCAL_PATH>", line 12, in <module>
+    from torchsummaryX import summary
+  File "<LOCAL_PATH>", line 1, in <module>
+    from .torchsummaryX import summary
+  File "<LOCAL_PATH>", line 3, in <module>
+    import pandas as pd
+  File "<LOCAL_PATH>", line 61, in <module>
+    from pandas.core.api import (
+  File "<LOCAL_PATH>", line 1, in <module>
+    from pandas._libs import (
+  File "<LOCAL_PATH>", line 16, in <module>
+    import pandas._libs.pandas_parser  # isort: skip # type: ignore[reportUnusedImport]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pandas._libs.pandas_parser'
+Check console.log and the README environment instructions.
